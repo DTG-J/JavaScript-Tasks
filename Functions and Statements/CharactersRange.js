@@ -7,7 +7,7 @@ function charactersInRange (char1, char2){
         for (let code = startCode + 1; code < endCode; code++) { // +1 and < to exclude boundaries
           result+=(String.fromCharCode(code)+' ');
         }
-        console.log (result)
+        return result.trim();
       }
       
 console.log (charactersInRange ('a', 'd') ) //	b c
