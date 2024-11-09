@@ -1,17 +1,10 @@
 function oddEvenSum (num){
     let evenSum = 0;
     let oddSum = 0; 
-    const stringnum = num.toString().split('').map(Number);
-
-    for (let i = stringnum [0]; i < stringnum - 1, i++;){
-
-    if (stringnum % 2 == 0){
-        evenSum +=stringnum
-    }else {
-        oddSum +=stringnum
-    }
-}
-    return(evenSum, oddSum)
+    const digits = Math.abs(num).toString().split('').map(Number);
+    console.log (digits)
 }
 
-console.log (oddEvenSum (1000435));
+    
+
+oddEvenSum (1000435);
