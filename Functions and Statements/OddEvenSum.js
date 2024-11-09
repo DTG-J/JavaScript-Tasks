@@ -1,8 +1,10 @@
 function oddEvenSum (num){
-    let evenSum = 0;
-    let oddSum = 0; 
+  
     const digits = Math.abs(num).toString().split('').map(Number);
-    console.log (digits)
+    const evenSum = digits.filter(d => d % 2 === 0).reduce ((sum, d) => sum + d, 0);
+    const oddSum = digits.filter(d => d % 2 !== 0).reduce ((sum, d) => sum + d, 0);
+
+    console.log('Odd sum = ${oddSum}, Even sum = ${evenSum}');
 }
 
     
