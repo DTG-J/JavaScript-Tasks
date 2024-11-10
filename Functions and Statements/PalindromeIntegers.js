@@ -16,3 +16,5 @@ function checkForPalindrome(numbers){
 
 
 checkForPalindrome ([123,323,421,121])	//false true false true
+checkForPalindrome ([32,2,232,1010])	//false true true false
+
