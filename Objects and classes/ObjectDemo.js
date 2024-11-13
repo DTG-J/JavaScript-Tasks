@@ -20,3 +20,5 @@ console.log(someCat);
 
 //Set property dinamicaly with
 someCat['isCrazy'] = true; 
+let sanityCheck = 'isCrazy';
+console.log (someCat[sanityCheck]);
