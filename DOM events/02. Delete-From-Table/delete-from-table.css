@@ -74,10 +74,11 @@ input[type="button"] {
     transition: all 0.2s ease-in;
     box-shadow: 0 0 0.5em 0 rgb(0, 0, 0, 0.1);
 
-    &:hover {
-        background: var(--accent-color-text);
-        color: var(--accent-color);
-    }    
+    button:hover,
+input[type="button"]:hover {
+    background: var(--accent-color-text);
+    color: var(--accent-color);
+}
 }
 
 table {
