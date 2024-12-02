@@ -10,17 +10,14 @@ function solve() {
 
         if (state.includes('Lock'))return;
 
-        const hiddenFieldEl = profileEl.querySelector('hidden-fields');
+        const hiddenFieldEl = profileEl.querySelector('.hidden-fields');
 
         if (hiddenFieldEl.classList.contains('active')){
             hiddenFieldEl.classList.remove('active');
-            e.target.textContent = 'Show less'
-        }else{
+            e.target.textContent = 'Show less';
+        } else {
             hiddenFieldEl.classList.add('active');
-            e.target.textContent = 'Show more'
+            e.target.textContent = 'Show more';
         }
-        
-       
-
     });
 }
