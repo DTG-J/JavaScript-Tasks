@@ -22,6 +22,7 @@ fetch(baseUrl + '/posts')
     .then(posts =>{
 
         Object.values(posts).forEach(post => {
+
             const optionEl = document.createElement('option'); 
 
             Object.assign(optionEl.dataset.post);
@@ -39,6 +40,13 @@ function viewHandler(e) {
         .then(response => response.json())
         .then(comments => {
             console.log(comments); 
+
+            const optionEl = selectPosts.querySelector('option:checked');
+
+            postTitleEl.textContent = optionEl.dataset.title;
+            postBodyel.textContent = optionEl.dataset.body; 
+
+          
         })
 }
 
