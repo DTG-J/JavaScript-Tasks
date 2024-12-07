@@ -23,7 +23,12 @@ fetch(baseUrl + '/posts')
 
         Object.values(posts).forEach(post => {
             const optionEl = document.createElement('option'); 
-        })
+
+            Object.assign(optionEl.dataset.post);
+
+            optionEl.textContent = post.title;
+            selectPosts.append(optionEl);
+        });
     })
 
 }
