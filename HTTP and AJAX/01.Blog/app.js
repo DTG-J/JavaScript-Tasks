@@ -30,14 +30,21 @@ fetch(baseUrl + '/posts')
             selectPosts.append(optionEl);
         });
     })
+    .catch(error => console.error('Error: ', error)); 
 
+}
+
+function viewHandler(e) {
+    fetch(baseUrl + '/comments')
+        .then(response => response.json())
+        .then(comments => {
+            console.log(comments); 
+        })
 }
 
 
 
 
-
-
 }
 
-//attachEvents();
+attachEvents();
