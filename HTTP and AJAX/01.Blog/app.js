@@ -13,7 +13,17 @@ const postCommentsEl = document.querySelector('#post-comments');
 document.querySelector('#btnLoadPosts').addEventListener('click', loadHandler);
 document.querySelector('#btnViewPost').addEventListener('click', viewHandler);
 
+function loadHandler(e) {
 
+    selectPosts.innerHTML = '';
+
+fetch(baseUrl + '/posts')
+    .then(response => response.json())
+    .then(posts =>{
+        
+    })
+
+}
 
 
 
