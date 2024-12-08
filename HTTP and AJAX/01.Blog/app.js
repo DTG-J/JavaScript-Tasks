@@ -46,13 +46,16 @@ function viewHandler(e) {
             postTitleEl.textContent = optionEl.dataset.title;
             postBodyel.textContent = optionEl.dataset.body; 
 
-          
+          Object.values(comments).forEach(comment => {
+            if ( comment.postId === optionEl.dataset.id ){
+            const commentEl = document.createElement('li');
+            commentEl.textContent = comment.text;
+            postCommentsEl.append(commentEl)
+            }
+          })
         })
-}
-
-
-
-
+        .catch(error => console.error('Error: ', error));
+    }
 }
 
 attachEvents();
