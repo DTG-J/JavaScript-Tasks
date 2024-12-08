@@ -20,16 +20,16 @@ function loadHandler(e) {
 fetch(baseUrl + '/posts')
     .then(response => response.json())
     .then(posts =>{
-
+        
         Object.values(posts).forEach(post => {
-
             const optionEl = document.createElement('option'); 
+             optionEl.textContent = post.title;
+             selectPosts.append(optionEl);
+           //Object.assign(optionEl.dataset.post);
 
-            Object.assign(optionEl.dataset.post);
-
-            optionEl.textContent = post.title;
-            selectPosts.append(optionEl);
-        });
+       
+        
+         });
     })
     .catch(error => console.error('Error: ', error)); 
 
