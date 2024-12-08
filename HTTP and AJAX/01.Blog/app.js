@@ -22,13 +22,14 @@ fetch(baseUrl + '/posts')
         
         Object.values(posts).forEach(post => {
             const optionEl = document.createElement('option'); 
-             optionEl.textContent = post.title;
-             selectPosts.append(optionEl);
-           Object.assign(optionEl.dataset.post);  //copies all  properties from post and sets them to dataset
+             Object.assign(optionEl.dataset, post);  //copies all  properties from post and sets them to dataset
                              // Those are equal expressions ===
         //    optionEl.dataset.id = post.id;
         //    optionEl.dataset.title = post.title;
         //    optionEl. dataset.body = post.body;
+             optionEl.textContent = post.title;
+             selectPosts.append(optionEl);
+          
          });
     })
     .catch(error => console.error('Error: ', error)); 
