@@ -14,7 +14,6 @@ document.querySelector('#btnLoadPosts').addEventListener('click', loadHandler);
 document.querySelector('#btnViewPost').addEventListener('click', viewHandler);
 
 function loadHandler(e) {
-
     selectPosts.innerHTML = '';
 
 fetch(baseUrl + '/posts')
@@ -25,14 +24,14 @@ fetch(baseUrl + '/posts')
             const optionEl = document.createElement('option'); 
              optionEl.textContent = post.title;
              selectPosts.append(optionEl);
-           //Object.assign(optionEl.dataset.post);
-
-       
-        
+           Object.assign(optionEl.dataset.post);  //copies all  properties from post and sets them to dataset
+                             // Those are equal expressions ===
+        //    optionEl.dataset.id = post.id;
+        //    optionEl.dataset.title = post.title;
+        //    optionEl. dataset.body = post.body;
          });
     })
     .catch(error => console.error('Error: ', error)); 
-
 }
 
 function viewHandler(e) {
