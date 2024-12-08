@@ -16,6 +16,27 @@ function attachEvents() {
             method: 'POST', 
             body: JSON.stringify(body)
         })
+        .then(response => response.json())
+        .then(result => {
+            refreshBtnEl.click();
+        })
+        .catch(error => console.error('Error: ', error));
+    });
+
+    refreshBtnEl.addEventListener('click', (e) =>{
+
+        outputEl.textContent = '';
+
+        fetch(baseUrl)
+            .then(response => response.json())
+            .then(messages => {
+                Object.values(messages).forEach(message => {
+                    console.log(messages);
+                    outputEl.textContent = outputEl.textContent.trimEnd()
+                })
+            .catch(error => console.error('Error: ', error));
+            })
+
     })
 
     
