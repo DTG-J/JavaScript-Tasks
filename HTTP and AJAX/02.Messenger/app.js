@@ -31,19 +31,16 @@ function attachEvents() {
             .then(response => response.json())
             .then(messages => {
                 Object.values(messages).forEach(message => {
-                    console.log(messages);
-                    outputEl.textContent = outputEl.textContent.trimEnd()
-                })
-            .catch(error => console.error('Error: ', error));
-            })
-
-    })
-
+                    console.log(message);
+                    outputEl.textContent += `${message.author}: ${message.content}\n`
+                });
+                outputEl.textContent = outputEl.textContent.trimEnd();
+             })
+        .catch(error => console.error('Error: ', error));
+            
+    });
     
- 
-    
-
-    
+    refreshBtnEl.click();
 }
 
 attachEvents();
