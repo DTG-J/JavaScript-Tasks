@@ -1,0 +1,30 @@
+refreshBtnEl.addEventListener('click', (e) => {
+    outputEl.textContent = '';
+
+    fetch(baseUrl)
+        .then(response => {
+            if (!response.ok) {
+                // Handle HTTP errors (e.g., 404, 500)
+                throw new Error(`HTTP error! status: ${response.status}`); 
+            }
+            return response.json();
+        })
+        .then(messages => {
+            if (messages) { // Check if messages is defined
+                Object.values(messages).forEach(message => {
+                    console.log(message);
+                    outputEl.textContent += message + '\n'; // Append messages, not overwrite
+                });
+            } else {
+                console.warn("Messages data is empty or null.");
+                outputEl.textContent = "No messages found."; // Provide feedback to the user
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching or processing data:', error);
+            outputEl.textContent = "An error occurred. Please try again later."; // Inform the user
+        });
+
+    // Remove the self-calling click. This creates an infinite loop.
+    // refreshBtnEl.click(); 
+});
