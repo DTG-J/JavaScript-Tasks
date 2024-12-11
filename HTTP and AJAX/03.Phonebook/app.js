@@ -91,7 +91,23 @@ function init() {
 
 }
 
+function createEntryHandler(e) {
+
+    const inputs = document.querySelectorAll('input[type="text"][id]');
+
+    const [ person, phone ] = [...inputs].map(field => field.value);
+
+    if ( ! person || ! phone ) return;
+    
+    const contact = { person, phone };
+
+    createContact(baseUrl, contact, (result) => {
+        createEntry(result);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', init);
+
 
 attachEvents();
 }
