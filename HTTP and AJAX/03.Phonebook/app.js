@@ -81,10 +81,13 @@ function init() {
         );
     }
 
+    function deleteEntry(contact) {
+        phonebookEl.querySelector(`li[data-_id="${contact._id}"]`).remove();
+    }
 
     loadContacts(baseUrl, (result) => {
-        console.log(result);
-    });
+            console.log(result);
+        });
 
 }
 
