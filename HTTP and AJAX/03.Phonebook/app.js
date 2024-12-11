@@ -45,7 +45,17 @@ function deleteContact(baseUrl, contact, onSuccess){
         .catch(error => console.error('Error: ', error));
 }
 
+function createElement(tag, properties, container = null){
+    const element = document.createElement(tag);
 
+    Object.keys(properties).forEach(key => {
+        if( typeof properties[key] === 'object'){
+        Object.assign(element.dataset, properties[key])
+        } else {
+        element[key] = properties[key]; 
+        }
+    });
 }
 
 attachEvents();
+}
