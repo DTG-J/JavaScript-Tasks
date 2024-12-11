@@ -17,7 +17,7 @@ function attachEvents() {
 
 */
 
-function loadContacts(baseUrl, onSuccess){
+function loadContacts(baseUrl, onSuccess) {	
     fetch(baseUrl)
         .then(response => response.json())
         .then(onSuccess)
@@ -61,8 +61,30 @@ function init() {
 
     const buttonLoadEl = document.querySelector('#btnLoad');
     const buttonCreateEl = document.querySelector('#btnCreate');
-    const phonebookEl = document.querySelector('#phonebook')
+    const phonebookEl = document.querySelector('#phonebook');
 
+    function createEntry({ person, phone, _id }) {
+        createElement(
+            'button',
+            { 
+                textContent: 'Delete',
+                onclick: deleteEntryHandler
+            },
+            createElement(
+                'li',
+                {
+                    textContent: `${person}: ${phone}`,
+                    dataset: { person, phone, _id }
+                },
+                phonebookEl
+            )
+        );
+    }
+
+
+    loadContacts(baseUrl, (result) => {
+        console.log(result);
+    });
 
 }
 
