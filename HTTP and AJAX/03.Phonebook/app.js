@@ -33,8 +33,18 @@ function createContact(baseUrl, contact, onSuccess){
     })
         .then(response => response.json())
         .then(onSuccess)
-        .catch(error => console.error('Error: ', error))
+        .catch(error => console.error('Error: ', error));
 }
+
+function deleteContact(baseUrl, contact, onSuccess){
+     fetch(baseUrl + '/' + contact.id, {
+        method: 'DELETE'
+     })
+        .then(response => response.json())
+        .then(onSuccess)
+        .catch(error => console.error('Error: ', error));
+}
+
 
 }
 
