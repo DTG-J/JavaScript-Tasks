@@ -17,8 +17,6 @@ function attachEvents() {
 
 */
 
-const baseUrl = 'http://localhost:3030/jsonstore/phonebook';
-
 function loadContacts(baseUrl, onSuccess){
     fetch(baseUrl)
         .then(response => response.json())
@@ -56,6 +54,19 @@ function createElement(tag, properties, container = null){
         }
     });
 }
+
+function init() {
+    
+    const baseUrl = 'http://localhost:3030/jsonstore/phonebook';
+
+    const buttonLoadEl = document.querySelector('#btnLoad');
+    const buttonCreateEl = document.querySelector('#btnCreate');
+    const phonebookEl = document.querySelector('#phonebook')
+
+
+}
+
+document.addEventListener('DOMContentLoaded', init);
 
 attachEvents();
 }
