@@ -73,19 +73,20 @@ console.log(y3);
 console.log(z3);
 
 
+//   In JavaScript, Map coercion refers to the automatic conversion of an object or an iterable (such as an array) into a Map using the Map constructor. This coercion happens implicitly when an object or iterable with key-value pairs is provided as an argument to the Map constructor.
+
+// Example: Here, the array keyValuePairs contains nested arrays representing key-value pairs. When this array is passed as an argument to the Map constructor, it is coerced into a Map, and the resulting Map (myMap) contains the key-value pairs from the array.
+  // Map coercion using the Map constructor
+
 const keyValuePairs = [
     ['key1', 'value1'],
     ['key2', 'value2'],
     ['key3', 'value3']
   ];
   
-
-
-
-//   In JavaScript, Map coercion refers to the automatic conversion of an object or an iterable (such as an array) into a Map using the Map constructor. This coercion happens implicitly when an object or iterable with key-value pairs is provided as an argument to the Map constructor.
-
-// Example: Here, the array keyValuePairs contains nested arrays representing key-value pairs. When this array is passed as an argument to the Map constructor, it is coerced into a Map, and the resulting Map (myMap) contains the key-value pairs from the array.
-  // Map coercion using the Map constructor
   const myMap = new Map(keyValuePairs);
   
   console.log(myMap);
+
+
+  
