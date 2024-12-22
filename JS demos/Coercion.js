@@ -1,3 +1,5 @@
+// Number to String Conversion
+// When any string or non-string value is added to a string, it always converts the non-string value to a string implicitly. When the string ‘Rahul’ is added to the number 10 then JavaScript does not give an error. It converts the number 10 to string ’10’ using coercion and then concatenates both strings.
 // The Number 10 is converted to
 // string '10' and then '+'
 // concatenates both strings   
@@ -30,3 +32,20 @@ console.log(w1);
 console.log(x1);
 console.log(y1);
 console.log(z1);
+
+
+
+// Boolean to Number
+// When a Boolean is added to a Number, the Boolean value is converted to a number as it is safer and easier to convert Boolean values to Number values. A Boolean value can be represented as 0 for ‘false’ or 1 for ‘true’. 
+// The Boolean value true is
+// converted to number 1 and
+// then operation is performed
+let x2 = true + 2;
+
+// The Boolean value false is
+// converted to number 0 and
+// then operation is performed
+let y2 = false + 2;
+
+console.log(x2);
+console.log(y2);
