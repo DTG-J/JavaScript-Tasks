@@ -49,3 +49,25 @@ let y2 = false + 2;
 
 console.log(x2);
 console.log(y2);
+
+
+
+
+// The Equality Operator
+// The equality operator (==) can be used to compare values irrespective of their type. This is done by coercing a non-number data type to a number. 
+// Should output 'true' as string '10'
+// is coerced to number 10
+let x3 = (10 == '10');
+
+// Should output 'true', as boolean true
+// is coerced to number 1
+let y3 = (true == 1);
+
+// Should output 'false' as string 'true'
+// is coerced to NaN which is not equal to
+// 1 of Boolean true
+let z3 = (true == 'true');
+
+console.log(x3);
+console.log(y3);
+console.log(z3);
