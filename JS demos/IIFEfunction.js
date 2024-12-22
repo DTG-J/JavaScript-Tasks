@@ -15,3 +15,12 @@
 // (function() { } ): An anonymous function expression is denoted by the function() { } enclosed in parenthesis.
 // (): The function's expression is invoked or called right away by the following pair of parentheses(), which are outside the first set.
 // Example 1: In this example, this expression creates a local scope, preventing the counter variable from polluting the global scope. This encapsulation is beneficial, especially in larger applications where avoiding global variable conflicts is crucial.
+
+(function () {
+    let counter = 0;
+    function increaseCounter() {
+        counter++;
+    }
+    increaseCounter();
+    console.log(counter);
+})();
