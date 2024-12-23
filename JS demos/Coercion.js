@@ -1,3 +1,4 @@
+//https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/?fbclid=IwY2xjawGOETBleHRuA2FlbQIxMAABHUuK91hELs9g3AgmyDt5alhUt8w_i9oq1rC_WATgiJK87kumAyt9jVT0Lw_aem_0V3o6h8HXDZ9AgZO3_FJUw
 // Number to String Conversion
 // When any string or non-string value is added to a string, it always converts the non-string value to a string implicitly. When the string ‘Rahul’ is added to the number 10 then JavaScript does not give an error. It converts the number 10 to string ’10’ using coercion and then concatenates both strings.
 // The Number 10 is converted to
