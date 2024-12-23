@@ -40,6 +40,19 @@ console.log(y1);
 console.log(z1);
 
 
+// Numeric conversion
+// For an explicit conversion just apply the Number() function, same as you did with Boolean() and String() .
+
+// Implicit conversion is tricky, because it’s triggered in more cases:
+
+// comparison operators (>, <, <=,>=)
+// bitwise operators ( | & ^ ~)
+// arithmetic operators (- + * / % ). Note, that binary+ does not trigger numeric conversion, when any operand is a string.
+// unary + operator
+// loose equality operator == (incl. !=).
+// Note that == does not trigger numeric conversion when both operands are strings.
+
+
 
 // Boolean to Number
 // When a Boolean is added to a Number, the Boolean value is converted to a number as it is safer and easier to convert Boolean values to Number values. A Boolean value can be represented as 0 for ‘false’ or 1 for ‘true’. 
