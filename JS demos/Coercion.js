@@ -16,6 +16,11 @@ console.log(x);
 console.log(y);
 console.log(z);
 
+// String conversion
+// To explicitly convert values to a string apply the String() function. Implicit coercion is triggered by the binary + operator, when any operand is a string:
+String(123) // explicit
+123 + ''    // implicit
+
 
 
 
