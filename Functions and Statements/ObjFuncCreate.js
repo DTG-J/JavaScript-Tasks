@@ -30,12 +30,14 @@ function createPerson (name){
     return {
         name, 
         talk () {
-            return 'I am ${this.name}'
-        }
+            return `I am ${this.name}`      }
     }
 }
 
 const me = createPerson ('Dobro');
 const you = createPerson ('Charlie');
 
-me.talk
+me.talk ();
+you.talk (); 
+
+
