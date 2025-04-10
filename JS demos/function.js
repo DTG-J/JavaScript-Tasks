@@ -23,5 +23,12 @@ name = 'Dobry Ivanov';
 
 console.log(name, age);
 
+if (name == 'Dobry Ivanov') {
+    var test = 123; 
+    
+}
+
+console.log(test);  //we can use var outside the block of scope so it is not reconmmeded because of that.                   
+
 
 
