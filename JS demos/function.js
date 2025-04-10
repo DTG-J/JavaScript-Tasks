@@ -14,3 +14,14 @@ function text (fullName, grade) {
 text ('Koko', 5.3545);
 
 
+let name = 'Dobro';
+const age = 45;
+
+name = 'Dobry Ivanov';
+
+//age = 44;
+
+console.log(name, age);
+
+
+
