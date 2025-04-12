@@ -28,7 +28,26 @@ if (name == 'Dobry Ivanov') {
     
 }
 
-console.log(test);  //we can use var outside the block of scope so it is not reconmmeded because of that.                   
+console.log(test);  //we can use var outside the block of scope so it is not reconmmeded because of that.      
 
+let array = [4,5,6,8,1,9];
+
+//We declare index inside the loop
+for (let index = 0; index < array.length; index++) {
+   // const element = array[index];
+    console.log(array[index]);
+}
+
+
+//We declare variable outside the while loop!!!
+let i = 0;
+let arr = [8,3,4]
+
+while (i<=arr.length) {
+    console.log(i);
+    i++;
+
+    
+}
 
 
